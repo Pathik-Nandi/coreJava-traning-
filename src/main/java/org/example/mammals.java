@@ -40,4 +40,4 @@ public class mammals implements Animal {
     public void run() {
         System.out.println("they can run");
     }
-
+}

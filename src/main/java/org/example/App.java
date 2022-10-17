@@ -22,11 +22,12 @@ public class App
 
 
         // Call the sort function
-        Collections.sort();
+//        Collections.sort(m);
         for (mammals mammals : m) {
 
             // Print the sorted ArrayList
             System.out.println(mammals.name + " " + mammals.weight);
         }
+
     }
 }
