@@ -25,6 +25,7 @@ public class App
 
             // Print the sorted ArrayList
             System.out.println(mammals.name + " " + mammals.weight);
+
         }
 
     }

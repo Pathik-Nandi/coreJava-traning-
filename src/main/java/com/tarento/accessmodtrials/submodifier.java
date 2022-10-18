@@ -1,4 +1,4 @@
-package com.tarento.accesstrials;
+package com.tarento.accessmodtrials;
 
 public class submodifier {
     private String address;
