@@ -1,4 +1,4 @@
-package org.example;
+package com.tarento.javasample;
 
 public class mammals implements Animal {
     public String name;

@@ -1,6 +1,4 @@
-package org.example;
-
-import java.security.spec.RSAOtherPrimeInfo;
+package com.tarento.javasample;
 
 public class reptiles implements Animal{
     private String name;

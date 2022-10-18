@@ -1,4 +1,4 @@
-package com.tarento;
+package com.tarento.jsontrails;
 
 public class subpojo {
     private String name;

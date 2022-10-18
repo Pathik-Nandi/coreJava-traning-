@@ -1,8 +1,6 @@
-package org.example;
+package com.tarento.javasample;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 
 /**
  * Hello world!

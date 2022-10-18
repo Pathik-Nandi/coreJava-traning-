@@ -1,4 +1,4 @@
-package org.example;
+package com.tarento.javasample;
 
 public interface Animal {
     public void swim();

@@ -1,4 +1,4 @@
-package com.tarento;
+package com.tarento.jsontrails;
 
 public class Pojo {
     private  int id;
@@ -8,7 +8,7 @@ public class Pojo {
 
 
 
-    public Pojo(int id, String name, String description, com.tarento.subpojo subpojo) {
+    public Pojo(int id, String name, String description, com.tarento.jsontrails.subpojo subpojo) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -41,11 +41,11 @@ public class Pojo {
         this.description = description;
     }
 
-    public com.tarento.subpojo getSubpojo() {
+    public com.tarento.jsontrails.subpojo getSubpojo() {
         return subpojo;
     }
 
-    public void setSubpojo(com.tarento.subpojo subpojo) {
+    public void setSubpojo(com.tarento.jsontrails.subpojo subpojo) {
         this.subpojo = subpojo;
     }
     @Override
