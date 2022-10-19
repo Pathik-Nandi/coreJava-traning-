@@ -1,6 +1,6 @@
 package com.tarento.javasample;
 
-public class mammals implements Animal {
+public class mammals implements Animal , Comparable<mammals> {
     public String name;
     public int weight;
 

@@ -1,6 +1,7 @@
 package com.tarento.javasample;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Hello world!
@@ -20,7 +21,7 @@ public class App
 
 
         // Call the sort function
-//        Collections.sort(m);
+        Collections.sort(m);
         for (mammals mammals : m) {
 
             // Print the sorted ArrayList
