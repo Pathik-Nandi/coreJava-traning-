@@ -1,0 +1,4 @@
+{"name":"Pathik","id":101,"salary":31500}
+{"name":"Nandi","id":102,"salary":31900}
+{"name":"jesly","id":104,"salary":30000}
+{"name":"Raju","id":100,"salary":50000}
