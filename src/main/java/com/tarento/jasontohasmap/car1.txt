@@ -1,0 +1,12 @@
+[
+  {
+    "name": "TATA",
+    "price": 123456789,
+    "color": "red"
+  },
+  {
+    "name": "Mohendra",
+    "price": 98764321,
+    "color": "white"
+  }
+]

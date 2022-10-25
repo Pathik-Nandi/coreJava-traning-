@@ -1,0 +1,3 @@
+{"name":"werty", "price":34567, "color":"dfgh"}
+{"name":"TATA", "price":56780, "color":"red"}
+{"name":"Nandi Motors", "price":5678000, "color":"white"}
