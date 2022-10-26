@@ -13,7 +13,7 @@ public abstract class LamdaTrail implements LambdaInterface {
         };
         obj.emp(234,"TATA");
 
-//Using Lambda expression approach
+//---------Using Lambda expression approach----
         LambdaInterface obj2 ;
         obj2=(i,a)-> System.out.println("number"+i+ "\n String"+a);
         obj2.emp(1089,"Tarento");
