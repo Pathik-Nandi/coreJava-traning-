@@ -19,17 +19,17 @@ public class ComparatorTrial {
         laptopList.add(lap1);
         System.out.println(laptopList);
 
-        Comparator<Laptop> com= new Comparator<Laptop>()
-        {
-            public int compare(Laptop l1, Laptop l2)
-            {
-                if (l1.getPrice()>l2.getPrice())
-                    return 1;
-                else
-                    return -1;
-            }
-        };
-        Collections.sort(laptopList, com);
+//        Comparator<Laptop> com= new Comparator<Laptop>()
+//        {
+//            public int compare(Laptop l1, Laptop l2)
+//            {
+//                if (l1.getPrice()>l2.getPrice())
+//                    return 1;
+//                else
+//                    return -1;
+//            }
+//        };
+        Collections.sort(laptopList, new GenericComparator("price", Laptop.class));
         System.out.println("\n------------After sorting --------\n");
         for (Laptop l: laptopList)
         {
