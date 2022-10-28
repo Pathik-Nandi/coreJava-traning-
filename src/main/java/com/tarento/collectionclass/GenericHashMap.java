@@ -61,7 +61,6 @@ public class GenericHashMap {
 //            System.out.println("Roll no:  "+key+"     name:   "+map.get(key));
 //        }
       System.out.println("\n After Sorting");
-//using TreeMap constructor to sort the HashMap
         TreeMap<Integer,String> tm=new  TreeMap<Integer,String> (map);
         Iterator itr=tm.keySet().iterator();
         while(itr.hasNext())
