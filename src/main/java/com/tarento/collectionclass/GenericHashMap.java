@@ -7,12 +7,11 @@ import java.util.HashMap;
 
 public class GenericHashMap {
     public static void main(String[] args) throws Exception {
-        java.util.HashMap<Integer, String> map = new HashMap<>();
+        HashMap<Integer, String> map = new HashMap<>();
         map.put(101, "Pradip");
-        map.put(102, "Abdul");
-        map.put(103, "Sanchita");
-        map.put(105, "Riya");
-        map.put(106, "Poulomi");
+        map.put(108, "Sanchita");
+        map.put(103, "Nandi");
+        map.put(102, "Poulomi");
         System.out.println("\n The Original Map: \n" + map);
         HashMapAddElements(map);
         HashMapRemoveElements(map);
@@ -24,7 +23,11 @@ public class GenericHashMap {
     public static void HashMapAddElements(HashMap map) {
         map.put(106, "Pragati");//duplicate key
         map.put(107, "Pathik");
+        map.put(105, "Riya");
+        map.put(102, "Abdul");
         map.put(108, "Raju");
+        map.put(104, "Rupa");
+
         System.out.println("\n ----------Adding-------- ");
         System.out.println("After Adding Elements ");
         Set set = map.entrySet();
@@ -38,8 +41,8 @@ public class GenericHashMap {
     public static void HashMapRemoveElements(HashMap map) {
         System.out.println("\n ----------Removing-------- ");
         System.out.println("Before removing list of elements: \n" + map);
-        map.remove(105);
-        map.remove(107);
+        map.remove(104);
+        map.remove(106);
         System.out.println("After removing  list of elements: \n" + map);
     }
 
@@ -50,6 +53,22 @@ public class GenericHashMap {
     }
 
     private static void HashMapSortElements(HashMap map) {
+//        Iterator <Integer> it = map.keySet().iterator();
+//        System.out.println("\n Before Sorting");
+//        while(it.hasNext())
+//        {
+//            int key=(int)it.next();
+//            System.out.println("Roll no:  "+key+"     name:   "+map.get(key));
+//        }
+      System.out.println("\n After Sorting");
+//using TreeMap constructor to sort the HashMap
+        TreeMap<Integer,String> tm=new  TreeMap<Integer,String> (map);
+        Iterator itr=tm.keySet().iterator();
+        while(itr.hasNext())
+        {
+            int key=(int)itr.next();
+            System.out.println("Roll no:  "+key+"     name:   "+map.get(key));
+        }
 
     }
 }
