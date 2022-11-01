@@ -2,6 +2,7 @@ package com.tarento.threading;
 
 public class ThreadingDemo1 {
     public static void main(String[] args) {
+        long startTime= System.currentTimeMillis();
         Thread1 t1 = new Thread1();
         t1.start();
 
@@ -10,6 +11,12 @@ public class ThreadingDemo1 {
 
         Thread3 t3 = new Thread3();
         t3.start();
+        long stopTime= System.currentTimeMillis();
+        long executionTime= startTime-stopTime;
+        System.out.println("Total Execution Time:"+executionTime);
+        int core=Runtime.getRuntime().availableProcessors();
+        System.out.println("How many cores are used for this program:"+ core);
+
     }
 }
 
@@ -17,7 +24,7 @@ class Thread1 extends Thread
 {
     public  void run()
     {
-        long starttime= System.currentTimeMillis();
+        long startTime= System.currentTimeMillis();
         for (int i=0;i<=100;i++) {
             try {
                 sleep(100);
@@ -31,13 +38,16 @@ class Thread1 extends Thread
             }
 
         }
-        System.out.println(Thread.currentThread().getName()+":"+starttime);
+        long stopTime= System.currentTimeMillis();
+        long executionTime= startTime-stopTime;
+        Thread.currentThread().setName("Thread-1");
+        System.out.println("Total execution time for "+Thread.currentThread().getName()+":"+executionTime);
         System.out.println("----------------------------------------\n");
     }
 }
 class Thread2 extends Thread {
     public void run() {
-        long starttime = System.currentTimeMillis();
+        long startTime = System.currentTimeMillis();
         String str = "PirateOfTarentoExecutorService";
         str = str.toLowerCase();
         int count = 0;
@@ -57,9 +67,11 @@ class Thread2 extends Thread {
 
             }
         }
-
+        long stopTime= System.currentTimeMillis();
+        long executionTime= startTime-stopTime;
         System.out.println("Total no of vowels in string are: " + count);
-        System.out.println(Thread.currentThread().getName()+""+starttime);
+        Thread.currentThread().setName("Thread-2");
+        System.out.println("Total Execution time: "+Thread.currentThread().getName()+":"+executionTime);
         System.out.println("----------------------------------------\n");
     }
 }
@@ -67,7 +79,7 @@ class Thread3 extends Thread
 {
     public  void run()
     {
-        long starttime= System.currentTimeMillis();
+        long startTime= System.currentTimeMillis();
         for (int i=500;i>=100;i--) {
             try {
                 sleep(100);
@@ -81,7 +93,11 @@ class Thread3 extends Thread
             }
 
         }
-        System.out.println(Thread.currentThread().getName()+":"+starttime);
+        long stopTime= System.currentTimeMillis();
+        long executionTime= startTime-stopTime;
+        Thread.currentThread().setName("Thread-3");
+        System.out.println("Total Execution Time: "+ Thread.currentThread().getName()+":"+executionTime);
         System.out.println("----------------------------------------\n");
+
     }
 }
