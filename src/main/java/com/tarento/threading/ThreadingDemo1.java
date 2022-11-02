@@ -1,8 +1,13 @@
 package com.tarento.threading;
 
+import java.util.concurrent.CountDownLatch;
+
 public class ThreadingDemo1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         long startTime= System.currentTimeMillis();
+
+        CountDownLatch latch = new CountDownLatch(3);
+
         Thread1 t1 = new Thread1();
         t1.start();
 
@@ -11,6 +16,7 @@ public class ThreadingDemo1 {
 
         Thread3 t3 = new Thread3();
         t3.start();
+        latch.await();
         long stopTime= System.currentTimeMillis();
         long executionTime= startTime-stopTime;
         System.out.println("Total Execution Time:"+executionTime);
@@ -23,11 +29,11 @@ public class ThreadingDemo1 {
 class Thread1 extends Thread
 {
     public  void run()
-    {
+    {  int latch = 1;
         long startTime= System.currentTimeMillis();
         for (int i=0;i<=100;i++) {
             try {
-                sleep(100);
+                //sleep(100);
             }
             catch (Exception e)
             {
@@ -41,6 +47,7 @@ class Thread1 extends Thread
         long stopTime= System.currentTimeMillis();
         long executionTime= startTime-stopTime;
         Thread.currentThread().setName("Thread-1");
+        //latch.countDown();
         System.out.println("Total execution time for "+Thread.currentThread().getName()+":"+executionTime);
         System.out.println("----------------------------------------\n");
     }
@@ -52,7 +59,7 @@ class Thread2 extends Thread {
         str = str.toLowerCase();
         int count = 0;
         try {
-            sleep(1000);
+            //sleep(1000);
         }
         catch (Exception e)
         {
@@ -71,6 +78,7 @@ class Thread2 extends Thread {
         long executionTime= startTime-stopTime;
         System.out.println("Total no of vowels in string are: " + count);
         Thread.currentThread().setName("Thread-2");
+        //latch.countDown();
         System.out.println("Total Execution time: "+Thread.currentThread().getName()+":"+executionTime);
         System.out.println("----------------------------------------\n");
     }
@@ -79,10 +87,11 @@ class Thread3 extends Thread
 {
     public  void run()
     {
+
         long startTime= System.currentTimeMillis();
         for (int i=500;i>=100;i--) {
             try {
-                sleep(100);
+                //sleep(100);
             }
             catch (Exception e)
             {
@@ -96,6 +105,7 @@ class Thread3 extends Thread
         long stopTime= System.currentTimeMillis();
         long executionTime= startTime-stopTime;
         Thread.currentThread().setName("Thread-3");
+        //latch.countDown();
         System.out.println("Total Execution Time: "+ Thread.currentThread().getName()+":"+executionTime);
         System.out.println("----------------------------------------\n");
 
